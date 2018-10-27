@@ -4,7 +4,7 @@
 - Jenkins
 - xcodebuild
 
---
+### 概念
 
 workspace(.xcworkspace)可包含多个 projet，并管理它们的相互引用；
 
@@ -17,18 +17,13 @@ scheme（方案）它不同于上面四个，表示一个组合方案表示那�
 An Xcode scheme defines a collection of targets to build, a configuration to use when building, and a collection of tests to execute.可以针对编译，运行，单元测试，动态分析，静态代码分析以及打包进行一些配置
 
 
-## iOS自动打包发布脚本(python版）
----
-###使用方法
-1、下载完成后，将autobuild.py以及exportOptions.plist文件放到你的项目跟目录下（即与xx.xcworkspace或者xx.xcworkspace在同一个目录下）  
-2、打开autobuild.py，修改配置信息  
-3、打开命令终端，进入项目根目录  
-如果你是xx.xcodeproj  
-`./autobuild.py -p youproject.xcodeproj`  
+### python
+1、将 autobuild.py 、exportOptions.plist文件放到你的项目根目录下（即与xx.xcworkspace或者xx.xcworkspace在同一个目录下）  
+2、修改配置：autobuild.py
+3、运行脚本：autobuild.py
+如果你是xx.xcodeproj  `./autobuild.py -p youproject.xcodeproj`  
 
-如果你是xx.xcworkspace  
-`./autobuild.py -w youproject.xcworkspace`  
+如果你是xx.xcworkspace`./autobuild.py -w youproject.xcworkspace`  
 
 4、最终会在桌面生成带有时间戳的文件夹，含义ipa以及xcarchive文件
-
-endmail.py是发邮件脚本，若要打包发布成功后发送邮件通知某人，请在autobuild.py里引入该模块，调用即可。
+5、endmail.py是发邮件脚本，若要打包发布成功后发送邮件通知某人，请在autobuild.py里引入该模块，调用即可。
