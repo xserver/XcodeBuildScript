@@ -4,7 +4,7 @@
 - Jenkins
 - xcodebuild
 
-### 概念
+## 概念
 
 workspace(.xcworkspace)可包含多个 projet，并管理它们的相互引用；
 
@@ -17,7 +17,7 @@ scheme（方案）它不同于上面四个，表示一个组合方案表示那�
 An Xcode scheme defines a collection of targets to build, a configuration to use when building, and a collection of tests to execute.可以针对编译，运行，单元测试，动态分析，静态代码分析以及打包进行一些配置
 
 
-### python
+## python
 1、将 autobuild.py 、exportOptions.plist文件放到你的项目根目录下（即与xx.xcworkspace或者xx.xcworkspace在同一个目录下）  
 2、修改配置：autobuild.py
 3、运行脚本：autobuild.py
